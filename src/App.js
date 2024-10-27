@@ -57,10 +57,10 @@ const Counter = () => {
 
       {/* Feedback when counter reaches limit */}
       {counter === 0 && (
-        <p className="feedback">Counter is at the minimum value!</p>
+        <p className="feedback">Counter is at it's minimum value!</p>
       )}
       {counter === 100 && (
-        <p className="feedback">Counter is at the maximum value!</p>
+        <p className="feedback">Counter is at it's maximum value!</p>
       )}
     </div>
   );
