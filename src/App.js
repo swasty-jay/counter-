@@ -25,7 +25,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="counter-container">
+    <div className="container-fluid">
       <h1
         className={`counter ${
           counter === 0 ? "low" : counter === 100 ? "high" : ""
@@ -44,14 +44,16 @@ const Counter = () => {
 
       <div className="button-group">
         {/* Disable buttons based on counter value */}
+
+        <button onClick={decreaseCounter} disabled={counter === 0}>
+          Decrease
+        </button>
+        <button onClick={resetCounter}>Reset</button>
+
         <button onClick={increaseCounter} disabled={counter === 100}>
           Increase
         </button>
-        <button onClick={resetCounter}>Reset</button>
       </div>
-      <button onClick={decreaseCounter} disabled={counter === 0}>
-        Decrease
-      </button>
 
       {/* Feedback when counter reaches limit */}
       {counter === 0 && (
